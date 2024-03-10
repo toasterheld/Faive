@@ -1,0 +1,7 @@
+@import "variables.css";
+@import "icons.css";
+@import "reset.css";
+
+/* einzelne Unterseiten */
+
+@import "LandingPage.css";
