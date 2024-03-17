@@ -154,28 +154,49 @@ header > span {
     flex-direction: row-reverse;
 }
 
-#features {
-    display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
+#page_features {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.user_features {
-    grid-column: 3;
+.features_head {
+    text-align: center;
 }
 
-.other_features {
-    grid-column: 2;
+.features_head > h1 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+}
+
+.features_head > h2 {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .listed_features {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    width: 85%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.feature {
-    width: 250px;
-    height: 250px;
+.listed_features > div {
+    height: 600px;
+    padding: 20px;
+    border: 0.25px solid lightgrey;
 
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.listed_features > div > p {
+    padding: 0 35px 0 35px;
+    text-align: center;
+}
+
+.listed_features img {
+    width: 300px;
+    height: 300px;
 }
