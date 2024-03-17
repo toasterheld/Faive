@@ -153,3 +153,29 @@ header > span {
     justify-content: center;
     flex-direction: row-reverse;
 }
+
+#features {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+}
+
+.user_features {
+    grid-column: 3;
+}
+
+.other_features {
+    grid-column: 2;
+}
+
+.listed_features {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.feature {
+    width: 250px;
+    height: 250px;
+
+    background-color: red;
+}

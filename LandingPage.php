@@ -20,7 +20,7 @@
             </nav>
             <span><button class="start_into">Starte jetzt</button></span>
         </header>
-        <div id="page_intro">
+        <section id="page_intro">
             <div id="focus_text">
                 <p>Die <span style="color: #008359;">Familien-App</span></p>
                 </p>der nächsten Generation</p>
@@ -33,7 +33,35 @@
                 <button class="blacked_start">Starte jetzt <span style="margin-left: 10px" class="material-symbols-outlined">trending_flat</span></button>
                 <button class="learn_more">So funktioniert´s <span style="margin-right: 10px" class="material-symbols-outlined">help</span></button>
             </div>
-        </div>
+        </section>
+        <section id="features">
+            <div class="user_features">
+                <h1>Das was du brauchst, wenn du es brauchst.</h1>
+                <div class="listed_features">
+                    <span class="feature">
+                        <h3>Sicherheit</h3>
+                        <p>Deine Daten sind bei uns sicher. Wir verwenden die neuesten Technologien, um deine Daten zu schützen.</p>
+                    </span>
+                    <span class="feature">
+                        <h3>Übersicht</h3>
+                        <p>Deine Daten sind bei uns sicher. Wir verwenden die neuesten Technologien, um deine Daten zu schützen.</p>
+                    </span>
+                </div>
+            </div>
+            <div class="other_features">
+                <h1>Das was du brauchst, wenn du es brauchst.</h1>
+                <div class="listed_features">
+                    <span class="feature">
+                        <h3>Sicherheit</h3>
+                        <p>Deine Daten sind bei uns sicher. Wir verwenden die neuesten Technologien, um deine Daten zu schützen.</p>
+                    </span>
+                    <span class="feature">
+                        <h3>Übersicht</h3>
+                        <p>Deine Daten sind bei uns sicher. Wir verwenden die neuesten Technologien, um deine Daten zu schützen.</p>
+                    </span>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
