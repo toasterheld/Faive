@@ -12,8 +12,11 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 1;
 
     border-bottom: 1px solid #e0e0e0 ;
+    background-color: #ffffff;
+    position: fixed;
 }
 
 header > span {
@@ -217,7 +220,6 @@ header > span {
     content: '';
     position: absolute;
     background-color: var(--line-color);
-    z-index: 1;
 }
 
 .grid_item::after {
@@ -247,33 +249,58 @@ header > span {
     text-align: center;
 }
 
+.listed_reviews {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
 .review {
     width: 350px;
-    height: 100%;
-    border: 1px solid black;
+    height: 550px; TODO: change values;
+    border-radius: 25px;
+    margin-top: 35px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     text-align: center;
 }
 
 .user_picture {
-    width: 75%;
-    height: 150px;
+    width: 50%;
+    /* height gets the same value as width by LandingPage.js */
     object-fit: cover;
 
+    margin-top: 30px;
     border-radius: 100%;
+}
+
+.user_name {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.user_role {
+    font-size: 12px;
 }
 
 .star_rating {
     display: flex;
-    justify-content: space-between;
-    width: 120px;
+    justify-content: center;
+    width: 100%;
 }
 
 .star {
-    font-size: 24px;
+    font-size: 38px;
     color: lightgray;
 }
 
 .given {
     color: gold;
+}
+
+.user_text {
+    padding: 25px 35px 0;
 }
