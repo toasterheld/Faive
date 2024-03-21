@@ -304,3 +304,27 @@ header > span {
 .user_text {
     padding: 25px 35px 0;
 }
+
+#faq {
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+details {
+    border: 0.5px solid lightgray;
+    font-size: 1.5rem;
+    width: 75%;
+}
+
+summary {
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition: height 1s ease;
+}
