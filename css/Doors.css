@@ -1,4 +1,4 @@
-/* this file containts LoginPage.php and RegisterPage.php css */
+/* this file containts LoginPage.php and RegisterPage.html css */
 /* LoginPage.php -> */
 
 html {
@@ -84,13 +84,86 @@ body {
     width: 60%;
     height: 100%;
     background-color: #008359;
+    color: #ffffff;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .presenting {
     width: 500px;
     height: 500px;
+}
+
+.your_way {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+
+.register_now {
+    width: 100%;
+    height: 50px;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    background-color: #ffffff;
+    border: 0.5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+
+    color: #000000;
+    cursor: pointer;
+
+    margin-top: 20px;
+}
+
+/* RegisterPage.html -> */
+
+#register_background {
+    width: 50%;
+    height: 100%;
+    background: #008359;
+}
+
+#register_content {
+    width: 50%;
+}
+
+.register_form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get_to_know {
+    line-height: 25px;
+}
+
+.register_form > input {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.register_form > input:focus {
+    outline: none;
+    box-shadow: rgba(0, 131, 89, 0.25) 0px 0px 0px 3.75px;
+}
+
+.register {
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #008359;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+    cursor: pointer;
 }
