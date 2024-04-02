@@ -1,3 +1,6 @@
+<?php
+    require_once "../database/import.php";
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -12,8 +15,8 @@
     <nav>
         <div class="nav_head">
             <img class="profile_picture" src="../assets/pictures/reviews/placeholder.png">
-            <h1>Jan Lippert</h1>
-            <p>Administrator*in</p>
+            <h1><?php echo(getUsernameById($_SESSION["userid"])); ?></h1>
+            <p><?php echo(getRoleById($_SESSION["userid"])); ?></p>
         </div>
         <div class="nav_links">
             <span class="active"><img src="../assets/svg/icons/home.svg">Dashboard</span>
@@ -44,5 +47,6 @@
                 <p class="tile_fact">12.043€</p>
             </div>
         </div>
+        <a href="index.php?page=logout" class="logout">Abmelden</a>
     </section>
 </body>

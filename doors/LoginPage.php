@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="../css/import.css">
 </head>
 <body>
-    <section id="login_content">
+    <form id="login_content" action="index.php?page=login&action" method="post">
         <a href="../LandingPage.html" class="go_back"><span class="material-symbols-outlined">arrow_back</span></a>
         <div class="logo_container">
             <img src="../assets/svg/profile_picture.svg">
         </div>
-            <input placeholder="E-Mail oder Benutzername">
-            <input type="password" placeholder="Passwort">
+            <input placeholder="Benutzername" name="username">
+            <input type="password" placeholder="Passwort" name="password">
             <input type="submit" value="Anmelden" class="login">
             <a href="#" class="forgot_password">Passwort vergessen?</a>
-    </section>
+    </form>
     <section id="login_background">
         <img src="../assets/svg/features/finanzen.svg" class="presenting">
         <span class="your_way">Dein modernes Familienleben!</span>
         <p>Faive bietet für jede Familie die perfekte Organisation. Es befreit dich <br /> von langen und komplizierten Absprachen und vereinfacht alles.</p>
-        <a href="RegisterPage.html" style="width: 25%"><button class="register_now">Jetzt registrieren!</button></a>
+        <a href="index.php?page=register" style="width: 25%"><button class="register_now">Jetzt registrieren!</button></a>
     </section>
 </body>

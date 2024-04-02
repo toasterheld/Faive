@@ -12,14 +12,15 @@
 
     </section>
     <section id="register_content">
-        <div class="register_form">
-            <input type="text" placeholder="Vorname">
-            <input type="text" placeholder="Nachname">
-            <input type="email" placeholder="E-Mail">
-            <input type="password" placeholder="Passwort">
+        <form class="register_form" action="index.php?page=register&newUser" method="post">
+            <input type="text" placeholder="Benutzername" name="username">
+            <input type="text" placeholder="Vorname" name="first_name">
+            <input type="text" placeholder="Nachname" name="last_name">
+            <input type="email" placeholder="E-Mail" name="email">
+            <input type="password" placeholder="Passwort" name="password">
             <input type="password" placeholder="Passwort wiederholen">
             <input type="submit" value="Registrieren" class="register">
-        </div>
+        </form>
     </section>
 </body>
 </html>
