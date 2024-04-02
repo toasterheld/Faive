@@ -41,11 +41,11 @@
                 case "dashboard":
                     require_once("../internal/dashboard.php");
                     break;
-                default:
-                    require_once("./error/404.php");
-                    break;
                 case "logout":
                     require_once("../logout.php");
+                    break;
+                default:
+                    require_once("../error/404.php");
                     break;
             }
         }
