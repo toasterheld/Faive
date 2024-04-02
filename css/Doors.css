@@ -1,0 +1,169 @@
+/* this file containts LoginPage.php and RegisterPage.html css */
+/* LoginPage.php -> */
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+#login_content {
+    width: 40%;
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.go_back {
+    position: absolute;
+
+    top: 10px;
+    left: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.go_back > span {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.logo_container > img {
+    width: 150px;
+    height: 150px;
+
+    margin-bottom: 35px;
+}
+
+#login_content > input {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#login_content > input:focus {
+    outline: none;
+    box-shadow: rgba(0, 131, 89, 0.25) 0px 0px 0px 3.75px;
+}
+
+.login {
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #008359;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.forgot_password {
+    font-size: 14px;
+    color: #008359;
+    cursor: pointer;
+}
+
+.forgot_password:hover {
+    text-decoration: underline;
+}
+
+#login_background {
+    width: 60%;
+    height: 100%;
+    background-color: #008359;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.presenting {
+    width: 500px;
+    height: 500px;
+}
+
+.your_way {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+
+.register_now {
+    width: 100%;
+    height: 50px;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    background-color: #ffffff;
+    border: 0.5px solid lightgrey;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+
+    color: #000000;
+    cursor: pointer;
+
+    margin-top: 20px;
+}
+
+/* RegisterPage.html -> */
+
+#register_background {
+    width: 50%;
+    height: 100%;
+    background: #008359;
+}
+
+#register_content {
+    width: 50%;
+}
+
+.register_form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get_to_know {
+    line-height: 25px;
+}
+
+.register_form > input {
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.register_form > input:focus {
+    outline: none;
+    box-shadow: rgba(0, 131, 89, 0.25) 0px 0px 0px 3.75px;
+}
+
+.register {
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #008359;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+    cursor: pointer;
+}
