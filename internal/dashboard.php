@@ -22,31 +22,26 @@
             <span class="active"><img src="../assets/svg/icons/home.svg">Dashboard</span>
             <span><img src="../assets/svg/icons/task.svg">Aufgaben</span>
             <span><img src="../assets/svg/icons/calendar.svg">Termine</span>
+            <?php
+        switch(getRoleById($_SESSION["userid"])) {
+            case "Superadministrator*in":
+                echo("<span><img src='../assets/svg/icons/calendar.svg'><a href='index.php?page=admin'>Admin</a></span>");
+                break;
+            case "Administrator*in":
+                echo("<span><img src='../assets/svg/icons/calendar.svg'><a href='index.php?page=admin'>Admin</a></span>");
+                break;
+        }
+    ?>
         </div>
     </nav>
-    <section class="dashboard_content">
-        <div class="date"><img src="../assets/svg/icons/calendar.png"><span class="fill_date"></span></div>
-        <div class="todo_container">
-            <div class="sphere"></div>
-            <div class="tile_text">
-                <span>zugeteilte Aufgaben</span>
-                <p class="tile_fact">1204</p>
-            </div>
-        </div>
-        <div class="event_container">
-            <div class="sphere"><span class="material-symbols-outlined">calendar_month</span></div>
-            <div class="tile_text">
-                <span>nächstes Event</span>
-                <p class="tile_fact">12. April</p>
-            </div>
-        </div>
-        <div class="money_container">
-            <div class="sphere"></div>
-            <div class="tile_text">
-                <span>verfügbares Geld</span>
-                <p class="tile_fact">12.043€</p>
-            </div>
-        </div>
-        <a href="index.php?page=logout" class="logout">Abmelden</a>
-    </section>
+    <?php
+        switch($_GET["page"]) {
+            case "dashboard":
+                require_once("content/homepage.php");
+                break;
+            case "admin":
+                require_once("content/admin.php");
+                break;
+        }
+    ?>
 </body>

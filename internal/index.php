@@ -32,8 +32,8 @@
             case "login":
                 require_once("../doors/LoginPage.php");
                 break;
-            case "logout":
-                require_once("../logout.php");
+            default:
+                require_once("../error/404.php");
                 break;
         }
      } else {
@@ -43,6 +43,9 @@
                     break;
                 case "logout":
                     require_once("../logout.php");
+                    break;
+                case "admin":
+                    require_once("../internal/content/admin.php");
                     break;
                 default:
                     require_once("../error/404.php");

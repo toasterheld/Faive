@@ -16,7 +16,6 @@
             font-size: 18px;
         }
     </style>
-</head>
 <body>
     <h1>404</h1>
     <p>Die Seite, die Sie suchen, konnte nicht gefunden werden.</p>
