@@ -19,6 +19,7 @@
                 <th>Vorname</th>
                 <th>Nachname</th>
                 <th>E-Mail</th>
+                <th>Passwort</th>
                 <th>Rolle</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                     echo("<td>" . $row["first_name"] . "</td>");
                     echo("<td>" . $row["last_name"] . "</td>");
                     echo("<td>" . $row["email"] . "</td>");
+                    echo("<td>" . $row["password"] . "</td>");
                     echo("<td>" . getRoleById($row["uid"]) . "</td>");
                     echo("</tr>");
                 }

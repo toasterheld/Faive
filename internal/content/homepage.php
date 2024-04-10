@@ -31,6 +31,14 @@
                 <p class="tile_fact">12.043€</p>
             </div>
         </div>
+        <div class="dropdown">
+            <button onclick="test()" class="select_family">Familien</button>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="#">Familie 1</a>
+                <a href="#">Familie 2</a>
+                <a href="#">Familie 3</a>
+            </div>
+        </div>
         <a href="index.php?page=logout" class="logout">Abmelden</a>
     </section>
 </body>

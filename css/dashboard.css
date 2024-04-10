@@ -1,3 +1,7 @@
+body {
+    display: flex;
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -152,4 +156,44 @@ nav {
     font-size: 32px;
     font-weight: 600;
     margin-top: 5px;
+}
+
+.select_family {
+    top: 25px;
+    right: 25px;
+    position: absolute;
+
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border: 1px solid black;
+}
+
+.select_family:hover, .select_family:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
