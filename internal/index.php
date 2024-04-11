@@ -39,7 +39,7 @@
      } else {
             switch ($_GET["page"]) {
                 case "dashboard":
-                    require_once("../internal/dashboard.php");
+                    require_once("../internal/content/homepage.php");
                     break;
                 case "logout":
                     require_once("../logout.php");

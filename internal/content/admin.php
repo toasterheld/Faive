@@ -1,6 +1,8 @@
 <?php
     require_once "../database/import.php";
+    require_once "../internal/sidebar.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -9,36 +11,41 @@
     <title>Faive | Das Familien-HQ</title>
     <link rel="icon" href="../assets/logos/faive_transparent.ico">
     <link rel="stylesheet" href="../css/import.css">
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Benutzername</th>
-                <th>Vorname</th>
-                <th>Nachname</th>
-                <th>E-Mail</th>
-                <th>Passwort</th>
-                <th>Rolle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                $query = $db->query("SELECT * FROM users ORDER BY uid");
-                while($row = $query->fetch_array()) {
-                    echo("<tr>");
-                    echo("<td>" . $row["uid"] . "</td>");
-                    echo("<td>" . $row["username"] . "</td>");
-                    echo("<td>" . $row["first_name"] . "</td>");
-                    echo("<td>" . $row["last_name"] . "</td>");
-                    echo("<td>" . $row["email"] . "</td>");
-                    echo("<td>" . $row["password"] . "</td>");
-                    echo("<td>" . getRoleById($row["uid"]) . "</td>");
-                    echo("</tr>");
-                }
-            ?>
-        </tbody>
-    </table>
+    <div class="admin_container">
+        <div class="admin_content">
+            <table>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th>ID</th>
+                        <th>Benutzername</th>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>Rolle</th>
+                        <th>Aktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        $query = $db->query("SELECT * FROM users ORDER BY uid");
+                        while($row = $query->fetch_array()) {
+                            echo("<tr>");
+                            echo("<td><input type='checkbox'></td>");
+                            echo("<td>" . $row["uid"] . "</td>");
+                            echo("<td>" . $row["username"] . " <p> " . $row["email"] . " </p></td>");
+                            echo("<td>" . $row["first_name"] . "</td>");
+                            echo("<td>" . $row["last_name"] . "</td>");
+                            echo("<td>" . getRoleById($row["uid"]) . "</td>");
+                            echo("<td><div class='editBox'><span class='material-symbols-outlined'>more_horiz</span></div></td>");
+                            echo("</tr>");
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

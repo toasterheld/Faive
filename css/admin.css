@@ -1,0 +1,52 @@
+.admin_container {
+    padding: 25px 50px 25px 50px;
+    width: 80%;
+}
+
+.admin_content {
+    border: 2px solid #ebebeb;
+    border-radius: 15px;
+    padding: 10px 25px 25px 25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+tr {
+    height: 75px;
+}
+
+tr:not(:first-child) {
+    border-top: 1px solid black;
+}
+
+tr:first-child {
+    border-bottom: 1px solid black;
+}
+
+td > p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #7a807e;
+}
+
+.editBox {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f6f8;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.editBox > span {
+    font-weight: bold;
+    color: #646a67;
+}
