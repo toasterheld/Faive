@@ -12,6 +12,7 @@
     <link rel="icon" href="../assets/logos/faive_transparent.ico">
     <link rel="stylesheet" href="../css/import.css">
     <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/Admin.js"></script>
 </head>
 <body>
     <div class="admin_container">
@@ -19,7 +20,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th><input type="checkbox"></th>
+                        <th><input id="Master_Checkbox" type="checkbox"></th>
                         <th>ID</th>
                         <th>Benutzername</th>
                         <th>Vorname</th>
@@ -33,8 +34,8 @@
                         $query = $db->query("SELECT * FROM users ORDER BY uid");
                         while($row = $query->fetch_array()) {
                             echo("<tr>");
-                            echo("<td><input type='checkbox'></td>");
-                            echo("<td>" . $row["uid"] . "</td>");
+                            echo("<td><input class='checkbox' type='checkbox'></td>");
+                            echo("<td><input value='" . $row["uid"] . "' disabled></td>");
                             echo("<td>" . $row["username"] . " <p> " . $row["email"] . " </p></td>");
                             echo("<td>" . $row["first_name"] . "</td>");
                             echo("<td>" . $row["last_name"] . "</td>");
