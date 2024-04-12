@@ -35,7 +35,7 @@
                         while($row = $query->fetch_array()) {
                             echo("<tr>");
                             echo("<td><input class='checkbox' type='checkbox'></td>");
-                            echo("<td><input value='" . $row["uid"] . "' disabled></td>");
+                            echo("<td>" . $row["uid"] . "</td>");
                             echo("<td>" . $row["username"] . " <p> " . $row["email"] . " </p></td>");
                             echo("<td>" . $row["first_name"] . "</td>");
                             echo("<td>" . $row["last_name"] . "</td>");
