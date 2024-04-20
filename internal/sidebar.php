@@ -13,11 +13,11 @@
 </head>
 <body>
     <nav>
+        <div class="search_bar">
+            <input type="text" placeholder="Suche">
+        </div>
         <div class="nav_links">
             <span class="<?php if($_GET["page"] == "dashboard") echo "active"; ?>"><img src="../assets/svg/icons/home.svg"><a href="index.php?page=dashboard">Dashboard</a></span>
-            <span><img src="../assets/svg/icons/task.svg">Aufgaben</span>
-            <span><img src="../assets/svg/icons/calendar.svg">Termine</span>
-
             <?php
         switch(getRoleById($_SESSION["userid"])) {
             case "Superadministrator*in":
@@ -26,7 +26,6 @@
                 break;
         }
     ?>
-            <span><span class="material-icons-round">settings</span>Einstellungen</span>
         </div>
         <div class="profile_card">
             <div class="card_content">
@@ -55,12 +54,30 @@
         height: 100%;
     }
     nav {
+        margin-top: 50px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 16%;
         height: 100%;
         background-color: #f7f7f7;
+    }
+
+    .search_bar {
+        width: 80%;
+        height: 35px;
+    }
+
+    .search_bar > input {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+
+        border: none;
+        border-radius: 10px;
+        border: 2px solid #F1F0F0;
+        outline: none;
     }
 
     .nav_links {
@@ -114,7 +131,6 @@
     }
 
     .card_content {
-        width: 100%;
         padding: 20px;
         margin: 20px;
 
@@ -123,6 +139,8 @@
         border-radius: 20px;
 
         display: flex;
+        position: absolute;
+        bottom: 15px;
     }
 
     .card_content > img {
